@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit&display=swap');
 @media screen and (min-width: 600px) {
 
     body {
@@ -55,7 +56,6 @@
     .aboutMe {
         display: grid;
         grid-template-columns: 75% 25%;
-        justify-items: space-between;
         text-align: left;
     }
 
