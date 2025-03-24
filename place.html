@@ -22,15 +22,18 @@
   </head>
 
   <body>
-    <main>         
+    <header>
         <h1>Brazil</h1>
+    </header>
+    <main>        
+        
         <picture>
             <!-- Larger image for desktops -->
-            <source media="(min-width: 625px)" srcset="images/rainforest-large.webp">      
+            <source media="(min-width: 625px)" srcset="images/rainforest-large.webp" class="small">      
             <!-- Smaller image for mobile -->
             <source media="(max-width: 624px)" srcset="images/rainforest-small.webp">      
             <!-- Fallback image -->
-            <img src="rainforest-small.webp" alt="Responsive image" style="width: 100%; height: auto;">
+            <img src="images/rainforest-small.webp" alt="Responsive image" class="fallback">
         </picture>
         <div class="info-large">
             <section class="data">
@@ -71,10 +74,10 @@
                 </div>
             </section>
             <section class="weather">
-                <span class="heading">
+                <div class="heading">
                     <h2>Weather</h2>
-                    <img src="images/partly-cloudy-icon.svg">
-                </span>
+                    <img src="images/partly-cloudy-icon.svg" alt="Weather icon">
+                </div>
                 <div class="info">
                     <span class="label">Temperature:</span>
                     <span class="value" id="temp"></span>

@@ -13,6 +13,16 @@ body {
     margin: 0 auto;
 }
 
+header h1 {
+    margin: 0 auto;
+    padding: 1.6rem;
+    font-size: 2.4rem;
+    text-align: center;
+    color: var(--tint);
+    background-color: var(--primary-color);
+    border-bottom: 20px solid var(--secondary-color);
+}
+
 main,
 footer {
     display: grid;
@@ -21,13 +31,9 @@ footer {
     box-sizing: border-box;
 }
 
-h1 {
-    margin: 0;
-    padding: 1.6rem;
-    font-size: 2.4rem;
-    color: var(--tint);
-    background-color: var(--primary-color);
-    border-bottom: 20px solid var(--secondary-color);
+.fallback {
+    width: 100%;
+    height: auto;
 }
 
 .info {
@@ -47,6 +53,10 @@ h1 {
 .heading img {
     width: 60px;
     height: 60px;
+}
+
+.data h2::after {
+    content: ' 😎';
 }
 
 footer {
