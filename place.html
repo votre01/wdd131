@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 - Week02 Activity - Temple Album</title>
+    <meta
+      name="description"
+      content="WDD 131 - This is the Dynamic Web Fundamentals course Temple Album assignment for week02"
+    />
+    <meta name="author" content="Trevor Ngwenya" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+
+  <body>
+    <main>         
+        <h1>Brazil</h1>
+        <picture>
+            <!-- Larger image for desktops -->
+            <source media="(min-width: 625px)" srcset="images/rainforest-large.webp">      
+            <!-- Smaller image for mobile -->
+            <source media="(max-width: 624px)" srcset="images/rainforest-small.webp">      
+            <!-- Fallback image -->
+            <img src="rainforest-small.webp" alt="Responsive image" style="width: 100%; height: auto;">
+        </picture>
+        <div class="info-large">
+            <section class="data">
+                <h2>Data</h2>
+                <div>
+                    <div class="info">
+                        <span class="label">Area:</span>
+                        <span class="value">8,515,767.049 sq km</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Population:</span>
+                        <span class="value">212,581,633</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Capital:</span>
+                        <span class="value">Brasília</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Languages:</span>
+                        <span class="value">Portuguese</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Currency:</span>
+                        <span class="value">Brazilian real (BRL)</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Time Zone:</span>
+                        <span class="value">GMT-3</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Calling Code:</span>
+                        <span class="value">+55</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Internet TLD:</span>
+                        <span class="value">.br</span>
+                    </div>
+                </div>
+            </section>
+            <section class="weather">
+                <span class="heading">
+                    <h2>Weather</h2>
+                    <img src="images/partly-cloudy-icon.svg">
+                </span>
+                <div class="info">
+                    <span class="label">Temperature:</span>
+                    <span class="value" id="temp"></span>
+                </div>
+                <div class="info">
+                    <span class="label">Conditions:</span>
+                    <span class="value">Partly Cloudy</span>
+                </div>
+                <div class="info">
+                    <span class="label">Wind:</span>
+                    <span class="value" id="windSpeed"></span>
+                </div>
+                <div class="info">
+                    <span class="label">Wind Chill:</span>
+                    <span class="value" id="windChill"></span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> 😀Trevor Ngwenya 😀Zimbabwe</p>
+        <p id="lastModified">Last Modification:</p>
+    </footer>
+  </body>
+</html>
