@@ -80,15 +80,67 @@ function getTemple(temple) {
         <h2>${temple.templeName}</h2>
         <p>Location: ${temple.location}</p>
         <p>Dedicated: ${temple.dedicated}</p>
+        <p>Size: ${temple.area}</p>
 
         <img src="${temple.imageUrl}" alt="${temple.templeName} temple">
     `
     return card;
 }
 
-temples.forEach(temple => {
-    templeCards.append(getTemple(temple));
+function displayTemples(temples) {
+    templeCards.innerText = "";
+    temples.forEach(temple => {
+        templeCards.append(getTemple(temple));
+    });
+}
+
+displayTemples(temples);
+
+document.querySelector("#oldTemples").addEventListener('click', () => {
+    const oldTemples = temples.filter(getOldTemples);
+    displayTemples(oldTemples);
 });
+
+document.querySelector("#newTemples").addEventListener('click', () => {
+    const newTemples = temples.filter(getNewTemples);
+    displayTemples(newTemples);
+});
+
+document.querySelector("#largeTemples").addEventListener('click', () => {
+    const largeTemples = temples.filter(getLargeTemples);
+    displayTemples(largeTemples);
+});
+
+document.querySelector("#smallTemples").addEventListener('click', () => {
+    const smallTemples = temples.filter(getSmallTemples);
+    displayTemples(smallTemples);
+});
+
+function getOldTemples(temple) {
+    const year = temple.dedicated.split(", ")[0];
+    if (year < 1900) {
+        return temple;
+    }
+}
+
+function getNewTemples(temple) {
+    const year = temple.dedicated.split(", ")[0];
+    if (year > 2000) {
+        return temple;
+    }
+}
+
+function getLargeTemples(temple) {
+    if (temple.area > 90000) {
+        return temple;
+    }
+}
+
+function getSmallTemples(temple) {
+    if (temple.area < 10000) {
+        return temple;
+    }
+}
 
 // Set dates
 const currentYear = document.querySelector('#year');
